@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
-<head>
+  <head>
     {% if FAVICON %}
-    <link rel="shortcut icon" href="{{ FAVICON }}" type="image/x-icon">
-    <link rel="icon" href="{{ FAVICON }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ FAVICON }}" type="image/x-icon" />
+    <link rel="icon" href="{{ FAVICON }}" type="image/x-icon" />
     {% endif %}
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="{{ ROBOTS }}" />
-
-    {% if BROWSER_COLOR %}
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="{{ BROWSER_COLOR }}">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="{{ BROWSER_COLOR }}">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    {% endif %}
 
     {% block meta %}
     <meta name="author" content="{{ AUTHOR }}" />
     <meta name="description" content="{{ SITEDESCRIPTION }}" />
     {% endblock %}
-    <title>{{ SITENAME }}{% block title %}{% endblock %}</title>
 
-</head>
+    <title>{{ SITENAME }} {% block title %} {% endblock %}</title>
+  </head>
 
-<body id="index" class="home">
-    {% block content %}
-    {% endblock %}
+  <body id="index" class="home">
+    {% block content %} {% endblock %}
     <footer class="footer">
       <div class="text-center">
-          <small class="copyright">Designed with <a href="https://github.com/getpelican/pelican/" target="_blank" rel="nofollow">Pelican</a></small>
-      </div><!--//container-->
-  </footer><!--//footer-->
-</body>
+        <small class="copyright"
+          >Designed with
+          <a
+            href="https://github.com/getpelican/pelican/"
+            target="_blank"
+            rel="nofollow"
+            >Pelican</a
+          ></small
+        >
+      </div>
+      <!--//container-->
+    </footer>
+    <!--//footer-->
+  </body>
 </html>
