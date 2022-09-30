@@ -6,36 +6,35 @@
     <link rel="icon" href="{{ FAVICON }}" type="image/x-icon" />
     {% endif %}
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     {% block meta %}
+    <meta charset="UTF-8" />
     <meta name="author" content="{{ AUTHOR }}" />
     <meta name="description" content="{{ SITEDESCRIPTION }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% endblock %}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></script>
 
     <title>{{ SITENAME }} {% block title %} {% endblock %}</title>
   </head>
 
-  <body id="index" class="home">
-    <header class="header">
-      
-    </header>
-    {% block content %} {% endblock %}
-    <footer class="footer">
-      <div class="text-center">
-        <small class="copyright"
-          >Designed with
-          <a
-            href="https://github.com/getpelican/pelican/"
-            target="_blank"
-            rel="nofollow"
-            >Pelican</a
-          ></small
-        >
+  <body class="bg-dark bg-opacity-10">
+    <nav class="navbar navbar-expand fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Eugene Ng</a>
       </div>
-      <!--//container-->
+    </nav>
+    {% block content %} {% endblock %}
+    <footer class="footer fixed-bottom">
+      <div class="text-center">
+        Designed with
+        <a href="https://github.com/twbs/bootstrap">Bootstrap</a>
+        and 
+        <a href="https://github.com/getpelican/pelican/">Pelican</a>
+      </div>
     </footer>
-    <!--//footer-->
   </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/darkreader/4.9.58/darkreader.js"></script>
 </html>
